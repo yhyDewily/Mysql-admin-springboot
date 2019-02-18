@@ -6,6 +6,9 @@ import lombok.Data;
 @Data
 public class GradesVO {
 
+    @JsonProperty("sname")
+    private String sname;
+
     @JsonProperty("cno")
     private String cno;
 
