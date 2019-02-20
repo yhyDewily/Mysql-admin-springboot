@@ -10,5 +10,5 @@ public interface StudentsService {
 
     void addOne(Student student);
 
-    void delOne(Student student);
+    void delOne(String sno);
 }

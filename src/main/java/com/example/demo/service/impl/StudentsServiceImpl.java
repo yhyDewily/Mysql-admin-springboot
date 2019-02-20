@@ -26,7 +26,8 @@ public class StudentsServiceImpl implements StudentsService {
     }
 
     @Override
-    public void delOne(Student student) {
+    public void delOne(String sno) {
+        Student student = studentRepository.getOne(sno);
         studentRepository.delete(student);
     }
 }

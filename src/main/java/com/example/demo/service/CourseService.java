@@ -14,6 +14,6 @@ public interface CourseService {
 
     void addCourse(Course course);
 
-    void delCourse(String cno) throws InvocationTargetException, SQLIntegrityConstraintViolationException, SQLIntegrityConstraintViolationException;
+    void delCourse(String cno) throws InvocationTargetException, SQLIntegrityConstraintViolationException;
 
 }
