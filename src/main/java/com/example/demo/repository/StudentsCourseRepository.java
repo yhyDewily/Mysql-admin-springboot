@@ -13,10 +13,13 @@ public interface StudentsCourseRepository extends JpaRepository<StudentsCourse, 
 
     List<StudentsCourse> findBySno(String sno);
 
+    @Query(value = "SELECT * FROM demo.sc WHERE CNO=?1", nativeQuery = true)
     List<StudentsCourse> findByCno(String cno);
 
+    @Query(value = "SELECT * FROM demo.sc WHERE SNO=?1 AND CNO=?2", nativeQuery = true)
     StudentsCourse findBySnoAndCno(String sno, String cno);
 
+    @Query(value = "SELECT * FROM demo.sc", nativeQuery = true)
     List<StudentsCourse> findAll();
 
     @Modifying

@@ -17,8 +17,8 @@ public class LoginController {
         String pswd = map.get("pswd");
         if(bindingResult.hasErrors()) return 500;
 
-        if (!logn.equals("16121755") && !pswd.equals("16121755")) return 400;
+        if ( logn.equals("16121755") && pswd.equals("16121755") ) return 200;
 
-        return 200;
+        return 400;
     }
 }
